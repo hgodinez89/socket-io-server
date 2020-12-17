@@ -34,6 +34,15 @@
         socket.on('message', function(payload) {
             console.log('Listen message: ', payload);
         });
+
+        socket.on('message-response', function(payload) {
+            console.log('Listen message: ', payload);
+        });
+
+        socket.on('active-bands', function(payload) {
+            console.clear();
+            console.table(payload);
+        });
     </script>
 </body>
 </html>
